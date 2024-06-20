@@ -1,0 +1,68 @@
+@use '../extends/_extends_dir';
+
+header {
+    @include box(100%,10%);
+    position: relative;
+
+    nav {
+        @include box(100%);
+        @include flex(row,space-between,center);
+        padding:0px 10% 0px 10%;
+
+        #menu {
+            width:50%;
+            height: 100%;
+            @include flex(row,space-between,center);
+
+            h1 {
+                font-family: 'KumbhBold';
+            }
+
+            .navMenu {
+                position: relative;
+                height: 100%;
+                @extend .pointer;
+                color:var(--grayishBlue);
+            }
+            .navMenu:hover {
+                color:var(--darkGrayishBlue);
+            }
+            .navMenu:hover::after {
+                content: "";
+                position: absolute;
+                bottom:-150%;
+                left:0;
+                @include box(100%,3px);
+                border: solid 2px var(--orange);
+            }
+        }
+
+        #cartLogin {
+            width:10%;
+            @include flex(row,space-between,center);
+
+            #cart {
+                @extend .pointer;
+            }
+
+            #login {
+                border-radius: 50%;
+                @extend .pointer;
+                height:60px;
+            }
+            #login:hover {
+                transform: scale(110%);
+                border:solid 2px var(--orange);
+            }
+        }
+    }
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:10%;
+    border:solid 1px rgba(222, 222, 222, 0.503);
+    @include box(80%,2px);
+}
