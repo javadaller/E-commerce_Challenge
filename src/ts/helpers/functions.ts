@@ -1,5 +1,5 @@
 /** SLEEP FUNCTION
-* await sleep(time in ms)
+** await sleep(time in ms)
 * @param {number} ms - the delay in milliseconds
 * @return {promise} - pending, fulfilled, rejected
 */
@@ -9,7 +9,7 @@ export function sleep(ms:number): Promise<unknown> {
 
 //------------------------------------------------------------------------------------------
 /** CREATE DIV
-create a container of your choice, with optionnal content and classe(s)
+**create a container of your choice, with optionnal content and classe(s)
 * @param {string} type - container type
 * @param {Element} parent - the parent container
 * @param {string} content - innerHTML

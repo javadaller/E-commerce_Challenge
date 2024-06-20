@@ -38,6 +38,7 @@ header {
         }
 
         #cartLogin {
+            position: relative;
             width:10%;
             @include flex(row,space-between,center);
 
@@ -53,6 +54,12 @@ header {
             #login:hover {
                 transform: scale(110%);
                 border:solid 2px var(--orange);
+            }
+            #cartContainer {
+                display:none;
+                position:absolute;
+                top:50%;
+                right:10%;
             }
         }
     }

@@ -687,6 +687,7 @@ header nav #menu .navMenu:hover::after {
   border: solid 2px var(--orange);
 }
 header nav #cartLogin {
+  position: relative;
   width: 10%;
   display: flex;
   flex-direction: row;
@@ -700,6 +701,12 @@ header nav #cartLogin #login {
 header nav #cartLogin #login:hover {
   transform: scale(110%);
   border: solid 2px var(--orange);
+}
+header nav #cartLogin #cartContainer {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
 }
 
 header::after {
